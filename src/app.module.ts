@@ -5,8 +5,7 @@ import { SqsModule } from '@ssut/nestjs-sqs';
 import { ProducerService } from './producer/producer.service';
 import { ConsumerService } from './consumer/consumer.service';
 import { SQSClient } from '@aws-sdk/client-sqs';
-
-require('dotenv').config();
+import 'dotenv/config';
 
 const sqsClient = new SQSClient({
   region: process.env.AWS_DEFAULT_REGION as string,

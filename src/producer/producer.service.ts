@@ -8,18 +8,15 @@ export class ProducerService {
   public async sendMessage() {
     try {
       const message = {
-        id: 'sample',
+        id: '1',
         body: 'sample message',
-        groupId: 'groupId',
-        deduplicationId: 'deduplicationId',
         delaySeconds: 0,
       };
 
-      this.sqsService.send('producer1', message);
+      await this.sqsService.send('producer1', message);
     } catch (error) {
-      console.log('Error sending message from producer');
-      console.log(error);
-      console.log(error.message);
+      console.error('Error sending message from producer:');
+      console.error(error);
     }
   }
 }

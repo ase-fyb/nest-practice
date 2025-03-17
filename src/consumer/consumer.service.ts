@@ -6,6 +6,6 @@ import { Message } from '@ssut/nestjs-sqs/dist/sqs.types';
 export class ConsumerService {
   @SqsMessageHandler('consumer1')
   public async consumeMessage(message: Message) {
-    return 'Received message with body: ' + message.body;
+    return 'Received message with body: ' + (await message.body);
   }
 }

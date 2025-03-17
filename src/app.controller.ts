@@ -15,7 +15,12 @@ export class AppController {
   }
 
   @Post('send')
-  produceMessage() {
-    this.producerService.sendMessage();
+  async produceMessage() {
+    try {
+      await this.producerService.sendMessage();
+    } catch (error) {
+      console.error('Error in controller while sending message from producer:');
+      console.error(error);
+    }
   }
 }
