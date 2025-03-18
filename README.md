@@ -22,5 +22,3 @@ $ localhost:2000/messages
 ## Configure AWS variables
 
 Run `cp .env.example .env` and fill in the fields in the newly created  `.env` file.
-
-Add the AWS SQS queue url to `config.ts `.
