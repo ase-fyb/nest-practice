@@ -5,7 +5,7 @@ import { Message } from '@ssut/nestjs-sqs/dist/sqs.types';
 @Injectable()
 export class ConsumerService {
 
-  private readonly logger = new Logger(ConsumerService.name);
+  private readonly logger = new Logger(ConsumerService.name, { timestamp: true });
 
   @SqsMessageHandler('consumer1')
   public async consumeMessage(message: Message) {
