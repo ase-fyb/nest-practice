@@ -22,3 +22,9 @@ $ localhost:2000/messages
 ## Configure AWS variables
 
 Run `cp .env.example .env` and fill in the fields in the newly created  `.env` file.
+
+## Produce and consume messages
+
+```bash
+$ localhost:2000/messages/send
+```
